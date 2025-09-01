@@ -1,0 +1,147 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background-color: hsl(216, 12%, 8%);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Overpass", sans-serif;
+  padding: 1rem;
+}
+
+.container {
+  margin: auto;
+  padding: 20px;
+  background-color: hsl(213, 19%, 18%);
+  border-radius: 12px;
+  width: 100%;
+  max-width: 400px;
+}
+
+.ratingSection {
+  display: block;
+}
+
+.star-icon {
+  background-color: hsl(215, 22%, 24%);
+  padding: 0.5rem;
+  border-radius: 50%;
+  width: 26px;
+}
+
+h1 {
+  font-size: clamp(1.2rem, 2vw, 1.6rem);
+  margin: 0.5rem 0;
+}
+
+p {
+  font-size: clamp(0.8rem, 1vw, 1rem);
+  margin-bottom: 0.8rem;
+  color: hsl(217, 12%, 63%);
+  line-height: 1.4;
+}
+
+.rating-button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  padding: 0.5rem 0;
+}
+
+.rating-item {
+  background-color: hsl(212, 14%, 23%);
+  color: hsl(217, 12%, 63%);
+  padding: 0.8rem;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  flex: 1 1 40px;
+  max-width: 50px;
+}
+.rating-item.active {
+  background-color: white;
+  color: hsl(216, 12%, 8%);
+}
+
+.rating-item:hover {
+  background-color: hsl(25, 97%, 53%);
+  color: white;
+}
+
+.rating-item {
+  transition: all 0.3s ease;
+}
+
+.submit-button {
+  background-color: hsl(25, 97%, 53%);
+  border: none;
+  display: block;
+  margin: 1rem auto;
+  padding: 0.8rem 1.5rem;
+  border-radius: 20px;
+  text-align: center;
+  width: 100%;
+  color: hsl(216, 12%, 8%);
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.submit-button:hover {
+  background-color: white;
+}
+
+.rating-display {
+  display: none;
+}
+
+.thank-you-image {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  height: auto;
+}
+
+.selectedRating {
+  display: flex;
+  justify-content: center;
+  margin-top: 0.8rem;
+}
+
+.selectedContentDetail {
+  background-color: hsl(215, 22%, 24%);
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: clamp(0.8rem, 1vw, 1rem);
+  color: hsl(25, 97%, 53%);
+  text-align: center;
+}
+
+.thankYou {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0 16px;
+  font-size: clamp(1rem, 2vw, 1.3rem);
+  text-align: center;
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 15px;
+  }
+
+  .rating-button {
+    justify-content: center;
+  }
+}
